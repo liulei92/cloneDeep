@@ -1,0 +1,31 @@
+{
+  "name": "clonedeep",
+  "version": "0.1.0",
+  "description": "深拷贝对象和数组",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwfun/cloneDeep.git"
+  },
+  "keywords": [
+    "javascript",
+    "clonedeep"
+  ],
+  "author": "zwfun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zwfun/cloneDeep/issues"
+  },
+  "homepage": "https://github.com/zwfun/cloneDeep#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
