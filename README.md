@@ -1,6 +1,8 @@
 
 [![Build Status](https://travis-ci.org/zwfun/cloneDeep.svg?branch=master)](https://travis-ci.org/zwfun/cloneDeep)
 
+[![codecov](https://codecov.io/gh/zwfun/cloneDeep/branch/master/graph/badge.svg)](https://codecov.io/gh/zwfun/cloneDeep)
+
 # 发布一个放心使用并且可维护的npm包(以发布一个深拷贝方法为例)
 
 #### 怎样才是一个放心使用并且可维护的npm包
@@ -88,6 +90,7 @@ Travis CI 提供的是持续集成服务（Continuous Integration，简称 CI）
 改善您的代码审查工作流程和质量。 Codecov提供高度集成的工具来分组，合并，存档和比较覆盖率报告
 
 - [codecov官方文档](https://docs.codecov.io/docs)
+- [codecov js node环境 example](https://github.com/codecov/example-node)
 
 #### 项目徽章设置
 
