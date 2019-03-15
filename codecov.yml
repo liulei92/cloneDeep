@@ -1,0 +1,18 @@
+
+coverage:
+  precision: 2
+  round: down
+  status:
+    patch:
+      default:
+        target: 85%
+    project:
+      default:
+        target: 85%
+
+comment:
+  layout: "header, diff, uncovered"
+  behavior: default
+
+after_success:
+  - codecov

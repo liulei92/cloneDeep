@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/zwfun/cloneDeep.svg?branch=master)](https://travis-ci.org/zwfun/cloneDeep)
+
 # 发布一个放心使用并且可维护的npm包(以发布一个深拷贝方法为例)
 
 #### 怎样才是一个放心使用并且可维护的npm包
