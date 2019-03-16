@@ -132,6 +132,16 @@ env: - CODECOV_TOKEN="6a3d8b1b-fe8e-44cb-8b6d-6af0d9344adc"
 
 #### 发布包
 
+- npm login
+- 填写用户名和密码邮箱
+- npm publish
+- npm报错了，原因是跟已发布的包重名了， 修改了package.json中的name(You do not have permission to publish "clonedeep". Are you logged in as the correct user?)
+- 发布成功+ zwclonedeep@0.1.0
 
+<pre>
+npm ERR! code E403
+npm ERR! 403 Forbidden - PUT https://registry.npmjs.org/clonedeep - You do not have permission to publish "clonedeep". Are you logged in as the correct user?
 
-
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/zw/npm_cache/_logs/2019-03-16T07_40_09_245Z-debug.log
+</pre>

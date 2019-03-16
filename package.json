@@ -1,6 +1,6 @@
 {
-  "name": "clonedeep",
-  "version": "0.1.0",
+  "name": "zwclonedeep",
+  "version": "1.0.0",
   "description": "深拷贝对象和数组",
   "main": "index.js",
   "scripts": {
