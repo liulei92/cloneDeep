@@ -98,7 +98,7 @@ ps: 在测试文件中使用 import 需要引入@babel/register 包(改写 requi
 - [commitizen 使用官方文档](https://github.com/commitizen/cz-cli)
 - [阮一峰 Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
-#### 五、eslit 和 prettier 配置
+#### 八、eslit 和 prettier 配置
 
 使用 husky 和 lint-staged 配合 eslit 和 prettier 在提交代码的时候格式化代码，使得提交的代码能够统一规范
 
@@ -108,7 +108,7 @@ ps: 在测试文件中使用 import 需要引入@babel/register 包(改写 requi
 -   [prettier 官方文档](https://prettier.io/docs/en/install.html)
 -   [使用 husky, prettier, eslint 在代码提交时自动格式化，并检查代码](https://juejin.im/post/5bf36163e51d45360069e0e8)
 
-#### 七、CI/CD 持续集成服务、自动构建和自动化测试
+#### 九、CI/CD 持续集成服务、自动构建和自动化测试
 
 -   travis-ci
     Travis CI 提供的是持续集成服务（Continuous Integration，简称 CI）。它绑定 Github 上面的项目，只要有新的代码，就会自动抓取。然后，提供一个运行环境，执行测试，完成构建，还能部署到服务器。
@@ -164,11 +164,11 @@ ps: 在测试文件中使用 import 需要引入@babel/register 包(改写 requi
 -   [codecov 官方文档](https://docs.codecov.io/docs)
 -   [codecov js node 环境 example](https://github.com/codecov/example-node)
 
-#### 八、github 徽章设置
+#### 十、github 徽章设置
 
 -   [github 徽章设置官网](https://shields.io/)
 
-#### 九、发布包
+#### 十一、发布包
 
 -   npm login
 -   填写用户名和密码邮箱
