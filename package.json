@@ -1,44 +1,64 @@
 {
-  "name": "zwclonedeep",
-  "version": "1.0.0",
-  "description": "深拷贝对象和数组",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack --config config/webpack.base.config.js --progress --hide-modules",
-    "test": "nyc mocha --require @babel/register -R spec test",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zwfun/cloneDeep.git"
-  },
-  "keywords": [
-    "javascript",
-    "clonedeep"
-  ],
-  "author": "zwfun",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zwfun/cloneDeep/issues"
-  },
-  "homepage": "https://github.com/zwfun",
-  "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/register": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "chai": "^4.2.0",
-    "clean-webpack-plugin": "^2.0.0",
-    "cz-conventional-changelog": "^2.1.0",
-    "mocha": "^6.0.2",
-    "nyc": "^13.3.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "name": "zwclonedeep",
+    "version": "1.0.0",
+    "description": "深拷贝对象和数组",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --config config/webpack.base.config.js --progress --hide-modules",
+        "test": "nyc mocha --require @babel/register -R spec test",
+        "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zwfun/cloneDeep.git"
+    },
+    "keywords": [
+        "javascript",
+        "clonedeep"
+    ],
+    "author": "zwfun",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/zwfun/cloneDeep/issues"
+    },
+    "homepage": "https://github.com/zwfun",
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.3.4",
+        "@babel/preset-env": "^7.3.4",
+        "@babel/register": "^7.0.0",
+        "babel-loader": "^8.0.5",
+        "chai": "^4.2.0",
+        "clean-webpack-plugin": "^2.0.0",
+        "cz-conventional-changelog": "^2.1.0",
+        "mocha": "^6.0.2",
+        "nyc": "^13.3.0",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.2.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "npm run test",
+            "pretty-quick --staged"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "eslint": "^5.15.2",
+        "eslint-config-prettier": "^4.1.0",
+        "eslint-plugin-prettier": "^3.0.1",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.5",
+        "prettier": "^1.16.4",
+        "pretty-quick": "^1.10.0"
     }
-  }
 }
