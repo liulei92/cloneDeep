@@ -1,7 +1,10 @@
 
-[![Build Status](https://travis-ci.org/zwfun/cloneDeep.svg?branch=master)](https://travis-ci.org/zwfun/cloneDeep)
 
-[![codecov](https://codecov.io/gh/zwfun/cloneDeep/branch/master/graph/badge.svg)](https://codecov.io/gh/zwfun/cloneDeep)
+<div align="center">
+
+[![Build Status](https://travis-ci.org/zwfun/cloneDeep.svg?branch=master)](https://travis-ci.org/zwfun/cloneDeep) [![codecov](https://codecov.io/gh/zwfun/cloneDeep/branch/master/graph/badge.svg)](https://codecov.io/gh/zwfun/cloneDeep)
+
+</div>
 
 # 发布一个放心使用并且可维护的npm包(以发布一个深拷贝方法为例)
 
@@ -89,14 +92,46 @@ Travis CI 提供的是持续集成服务（Continuous Integration，简称 CI）
 
 改善您的代码审查工作流程和质量。 Codecov提供高度集成的工具来分组，合并，存档和比较覆盖率报告
 
+网上的教程比较少 自己写个
+- 在[codecov](https://codecov.io/)用github账号登录
+[![https://github.com/zwfun](https://github.com/zwfun/cloneDeep/blob/master/doc/img/1.png?raw=true)](https://github.com/zwfun/cloneDeep)
+
+- 添加新项目
+[![https://github.com/zwfun](https://github.com/zwfun/cloneDeep/blob/master/doc/img/2.png?raw=true)](https://github.com/zwfun/cloneDeep)
+- 选择一个项目
+[![https://github.com/zwfun](https://github.com/zwfun/cloneDeep/blob/master/doc/img/3.png?raw=true)](https://github.com/zwfun/cloneDeep)
+- 复制token, 放在.travis.yml文件中
+<pre>
+// 这个token用来上传测试报告到对应的项目的
+env: - CODECOV_TOKEN="6a3d8b1b-fe8e-44cb-8b6d-6af0d9344adc" 
+</pre>
+[![https://github.com/zwfun](https://github.com/zwfun/cloneDeep/blob/master/doc/img/4.png?raw=true)](https://github.com/zwfun/cloneDeep)
+
+
+- 在.travis.yml文件中添加如下命令
+    <pre>
+        install:
+        - npm install //安装依赖包
+        - sudo pip install codecov // 安装codecov包
+        script:
+        - npm test // 执行测试用例
+        - npm run report-coverage //生成测试报告
+    </pre>
+- 在package.json文件中添加
+    <pre>
+        "test": "nyc mocha --require @babel/register -R spec test", // 执行测试用例
+        "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov" // 上传测试报告
+    </pre>
+    
+参考文档
 - [codecov官方文档](https://docs.codecov.io/docs)
 - [codecov js node环境 example](https://github.com/codecov/example-node)
 
-#### 项目徽章设置
-
-
+#### github徽章设置
+- [github徽章设置官网](https://shields.io/)
 
 #### 发布包
+
 
 
 
