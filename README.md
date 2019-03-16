@@ -23,9 +23,10 @@
 
 -   设置 package.json 文件
 -   webpack 配置
--   配置 eslint
+-   配置 eslint、prettier
 -   编写深拷贝方法
 -   编写单元测试/运行测试/测试报告
+-   使用git cz, 让提交的代码更规范
 -   提交前格式化代码
 -   放到 github 上
 -   自动构建和自动化测试
@@ -62,15 +63,7 @@ webpack 配置参考文档
 -   [babel 配置](https://babeljs.io/setup#installation)
     ps: 之后会写一篇关于 webpack 配置的，再补充进来
 
-#### 五、eslit 和 prettier 配置
 
-使用 husky 和 lint-staged 配合 eslit 和 prettier 在提交代码的时候格式化代码，使得提交的代码能够统一规范
-
-参考文档:
-
--   [eslint 官方文档](https://cn.eslint.org/docs/user-guide/getting-started)
--   [prettier 官方文档](https://prettier.io/docs/en/install.html)
--   [使用 husky, prettier, eslint 在代码提交时自动格式化，并检查代码](https://juejin.im/post/5bf36163e51d45360069e0e8)
 
 #### 五、编写深拷贝方法
 
@@ -98,6 +91,22 @@ webpack 配置参考文档
 -   [nyc 教程 我参考 npm 包的 readme](https://www.npmjs.com/package/nyc)
 
 ps: 在测试文件中使用 import 需要引入@babel/register 包(改写 require 命令，为它加上一个钩子。此后，每当使用 require 加载.js、.jsx、.es 和.es6 后缀名的文件，就会先用 Babel 进行转码)， 使用如下命令: nyc mocha --require @babel/register -R spec test
+
+#### 七、 使用git cz, 规范Commit message
+
+参考文档：
+- [commitizen 使用官方文档](https://github.com/commitizen/cz-cli)
+- [阮一峰 Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+
+#### 五、eslit 和 prettier 配置
+
+使用 husky 和 lint-staged 配合 eslit 和 prettier 在提交代码的时候格式化代码，使得提交的代码能够统一规范
+
+参考文档:
+
+-   [eslint 官方文档](https://cn.eslint.org/docs/user-guide/getting-started)
+-   [prettier 官方文档](https://prettier.io/docs/en/install.html)
+-   [使用 husky, prettier, eslint 在代码提交时自动格式化，并检查代码](https://juejin.im/post/5bf36163e51d45360069e0e8)
 
 #### 七、CI/CD 持续集成服务、自动构建和自动化测试
 
